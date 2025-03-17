@@ -1,0 +1,140 @@
+/* Estilos generales */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Formulario de filtrado */
+.filter-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.filter-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+    outline: none;
+    font-family: Verdana, sans-serif;
+}
+
+.filter-form input[type="text"]:focus {
+    border-color: #2980b9;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Verdana, sans-serif;
+}
+
+.filter-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Grid de motos */
+.motos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de moto */
+.moto-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.moto-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.moto-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.moto-body {
+    padding: 15px;
+}
+
+.moto-body p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+/* Estilos para el precio */
+.precio {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Estilos para el color */
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-form input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .filter-form button {
+        width: 100%;
+    }
+
+    .motos-grid {
+        grid-template-columns: 1fr;
+    }
+}   

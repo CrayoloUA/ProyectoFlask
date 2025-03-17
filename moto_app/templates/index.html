@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos en Stock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Motos Disponibles en Stock</h1>
+        
+        <!-- Formulario de filtrado -->
+        <form class="filter-form" method="get">
+            <input type="text" id="marca" name="marca" placeholder="Buscar por marca (Ej: Yamaha)">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Lista de motos en tarjetas -->
+        <div class="motos-grid">
+            {% for moto in motos %}
+            <div class="moto-card">
+                <div class="moto-header">
+                    <h2>{{ moto.marca }} {{ moto.modelo }}</h2>
+                </div>
+                <div class="moto-body">
+                    <p><strong>Precio:</strong> <span class="precio">${{ moto.precio }}</span></p>
+                    <p><strong>Color:</strong> 
+                     
+                    </p>
+                    <p><strong>Cilindrada:</strong> {{ moto.cilindrada }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
